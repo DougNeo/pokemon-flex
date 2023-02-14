@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>Pokemon Flex</title>
+  </head>
+  <body onload="addPokemon()">
+    <header>
+      <h1 id="titulo">Pokemon Flex</h1>
+      <a id="git" href="https://github.com/dougneo/pokemon-flex">
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </header>
+    <main>
+      <aside>     
+        <button onclick="addPokemon()">Adicionar Pokemon</button>
+        <button onclick="removePokemon()">Remover Pokemon</button>
+
+        <h2>Ajustes</h2>
+        <div id="form">
+          <label for="direction">Flex Direction</label>
+          <select name="direction" id="direction" onchange="mudarEstilo('flex-direction', this.value)">
+            <option value="none">None</option>
+            <option value="row">Row</option>
+            <option value="row-reverse">Row Reverse</option>
+            <option value="column">Column</option>
+            <option value="column-reverse">Column Reverse</option>
+          </select>
+
+          <label for="wrap">Flex Wrap</label>
+          <select name="wrap" id="wrap" onchange="mudarEstilo('flex-wrap', this.value)">
+            <option value="none">None</option>
+            <option value="nowrap">No Wrap</option>
+            <option value="wrap">Wrap</option>
+            <option value="wrap-reverse">Wrap Reverse</option>
+          </select>
+
+          <label for="justify-content">Justify Content</label>
+          <select name="justify-content" id="justify-content" onchange="mudarEstilo('justify-content', this.value)">
+            <option value="none">None</option>
+            <option value="flex-start">Flex Start</option>
+            <option value="flex-end">Flex End</option>
+            <option value="center">Center</option>
+            <option value="space-between">Space Between</option>
+            <option value="space-around">Space Around</option>
+            <option value="space-evenly">Space Evenly</option>
+          </select>
+
+          <label for="align-items">Align Items</label>
+          <select name="align-items" id="align-items" onchange="mudarEstilo('align-items', this.value)">
+            <option value="none">None</option>
+            <option value="stretch">Stretch</option>
+            <option value="flex-start">Flex Start</option>
+            <option value="flex-end">Flex End</option>
+            <option value="center">Center</option>
+            <option value="baseline">Baseline</option>
+          </select>
+
+          <label for="align-content">Align Content</label>
+          <select name="align-content" id="align-content" onchange="mudarEstilo('align-content', this.value)">
+            <option value="none">None</option>
+            <option value="stretch">Stretch</option>
+            <option value="flex-start">Flex Start</option>
+            <option value="flex-end">Flex End</option>
+            <option value="center">Center</option>
+            <option value="space-between">Space Between</option>
+            <option value="space-around">Space Around</option>
+          </select>
+        </div>
+      </aside>
+
+        <div id="pokemons" class="container">
+          
+        </div>
+    </main>
+    <footer>
+      <h2 id="rodape">Incentivado e idealizado por <a href="https://www.seguroviagem.srv.br">Real Seguro Viagem.</a>💜</h2>
+    </footer>
+  </body>
+</html>
